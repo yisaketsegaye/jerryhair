@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bellinis Salon Suite + Blow Bar</title>
+  <title>Jerry’s Hair Salon | Wheaton, MD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Bellinis Salon Suite + Blow Bar – modern hair, color, and blowout studio."
+    content="Jerry’s Hair Salon in Wheaton, MD. Cuts, color, braids, weave, treatments, relaxers, waxing and more. Located inside My Salon Suite at Wheaton Mall."
   />
 
   <!-- Google Fonts -->
@@ -19,11 +19,11 @@
     :root {
       --bg: #fdf9f7;
       --bg-alt: #ffffff;
-      --accent: #f5b2a7;
-      --accent-dark: #e08b7b;
+      --accent: #f3a56f;
+      --accent-dark: #e37a3a;
       --text: #222222;
       --muted: #777777;
-      --border: #eee4de;
+      --border: #eee1d8;
       --nav-height: 70px;
       --radius-lg: 18px;
       --radius-md: 12px;
@@ -55,7 +55,6 @@
       color: inherit;
     }
 
-    /* Layout helpers */
     .container {
       width: 100%;
       max-width: 1120px;
@@ -86,7 +85,6 @@
       letter-spacing: 0.03em;
     }
 
-    /* Navbar */
     header {
       position: sticky;
       top: 0;
@@ -124,7 +122,7 @@
       justify-content: center;
       font-family: "Playfair Display", serif;
       font-size: 1.1rem;
-      background: linear-gradient(135deg, #ffe2d8, #fdf9f7);
+      background: linear-gradient(135deg, #ffe2d1, #fdf9f7);
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
@@ -186,12 +184,12 @@
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), var(--accent-dark));
       color: #ffffff;
-      box-shadow: 0 10px 25px rgba(224, 139, 123, 0.35);
+      box-shadow: 0 10px 25px rgba(227, 122, 58, 0.35);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 14px 32px rgba(224, 139, 123, 0.45);
+      box-shadow: 0 14px 32px rgba(227, 122, 58, 0.45);
     }
 
     .btn-outline {
@@ -205,7 +203,6 @@
       color: var(--accent-dark);
     }
 
-    /* Mobile nav */
     .nav-toggle {
       display: none;
       width: 32px;
@@ -264,7 +261,6 @@
       display: flex;
     }
 
-    /* Hero */
     .hero {
       padding: 72px 0 90px;
     }
@@ -293,7 +289,7 @@
       width: 7px;
       height: 7px;
       border-radius: 999px;
-      background: #86d19f;
+      background: #67c38b;
     }
 
     .hero-title {
@@ -307,8 +303,20 @@
     .hero-subtitle {
       font-size: 0.98rem;
       color: var(--muted);
-      max-width: 460px;
+      max-width: 500px;
       margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 10px;
     }
 
     .hero-meta {
@@ -326,25 +334,13 @@
       font-weight: 600;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
     .hero-media {
       position: relative;
     }
 
     .hero-card {
       border-radius: 26px;
-      background: radial-gradient(circle at top left, #ffe4db, #fff);
+      background: radial-gradient(circle at top left, #ffe2cf, #fff);
       overflow: hidden;
       box-shadow: var(--shadow-soft);
       position: relative;
@@ -380,8 +376,8 @@
       width: 9px;
       height: 9px;
       border-radius: 999px;
-      background: #86d19f;
-      box-shadow: 0 0 0 6px rgba(134, 209, 159, 0.28);
+      background: #67c38b;
+      box-shadow: 0 0 0 6px rgba(103, 195, 139, 0.28);
     }
 
     .hero-stats {
@@ -401,7 +397,6 @@
       opacity: 0.9;
     }
 
-    /* About */
     .about-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
@@ -426,7 +421,7 @@
       padding: 16px 18px;
       border-radius: var(--radius-md);
       background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.85);
       box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
       font-size: 0.86rem;
     }
@@ -440,7 +435,7 @@
     .about-card {
       border-radius: 22px;
       padding: 22px;
-      background: linear-gradient(135deg, #ffffff, #ffeae2);
+      background: linear-gradient(135deg, #ffffff, #ffe8d8);
       box-shadow: var(--shadow-soft);
       font-size: 0.9rem;
     }
@@ -451,54 +446,44 @@
       margin-bottom: 8px;
     }
 
-    /* Services */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
     }
 
     .service-card {
       background: var(--bg-alt);
       border-radius: var(--radius-lg);
-      padding: 24px 22px;
+      padding: 18px 18px 16px;
       border: 1px solid var(--border);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      font-size: 0.9rem;
     }
 
-    .service-label {
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 8px;
+    .service-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 4px;
     }
 
     .service-name {
-      font-family: "Playfair Display", serif;
-      font-size: 1.2rem;
-      margin-bottom: 8px;
+      font-weight: 600;
     }
 
-    .service-desc {
-      font-size: 0.9rem;
+    .service-price {
+      font-weight: 500;
+      color: var(--accent-dark);
+      white-space: nowrap;
+    }
+
+    .service-note {
+      font-size: 0.8rem;
       color: var(--muted);
-      margin-bottom: 14px;
+      margin-top: 4px;
     }
 
-    .service-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .service-meta strong {
-      color: var(--text);
-    }
-
-    /* Portfolio */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -531,48 +516,6 @@
       font-size: 0.74rem;
     }
 
-    /* Packages */
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .package-card {
-      background: var(--bg-alt);
-      border-radius: var(--radius-lg);
-      padding: 24px 22px;
-      border: 1px solid var(--border);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.03);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .package-name {
-      font-family: "Playfair Display", serif;
-      font-size: 1.15rem;
-      margin-bottom: 6px;
-    }
-
-    .package-price {
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .package-desc {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .package-meta {
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    /* Contact */
     .contact-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
@@ -608,58 +551,80 @@
       margin-bottom: 4px;
     }
 
-    .contact-form {
-      background: linear-gradient(135deg, #ffe5dc, #ffffff);
-      border-radius: var(--radius-lg);
-      padding: 26px 24px;
-      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.04);
+    .hours-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.86rem;
     }
 
-    .field-group {
-      margin-bottom: 16px;
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
     }
 
-    .field-label {
-      display: block;
-      font-size: 0.8rem;
+    .hours-list span:first-child {
+      color: var(--muted);
+    }
+
+    .consent-card {
+      margin-top: 18px;
+      padding: 18px 18px 14px;
+      border-radius: var(--radius-md);
+      background: #fff9f3;
+      border: 1px dashed var(--border);
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    .consent-card h4 {
+      font-size: 0.86rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .consent-card ul {
+      margin-left: 17px;
+      margin-bottom: 8px;
+    }
+
+    .consent-card li {
+      margin-bottom: 4px;
+    }
+
+    .contact-right {
+      background: linear-gradient(135deg, #ffe1c9, #ffffff);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+      font-size: 0.92rem;
+    }
+
+    .contact-right h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-right p {
+      margin-bottom: 10px;
       color: var(--muted);
-      margin-bottom: 6px;
     }
 
-    .field-input,
-    .field-textarea,
-    .field-select {
+    .contact-right .btn-primary {
       width: 100%;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      font-size: 0.9rem;
-      outline: none;
-      background: rgba(255, 255, 255, 0.9);
+      justify-content: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
-    .field-textarea {
-      border-radius: 18px;
-      min-height: 90px;
-      resize: vertical;
-    }
-
-    .field-input:focus,
-    .field-textarea:focus,
-    .field-select:focus {
-      border-color: var(--accent-dark);
-      box-shadow: 0 0 0 1px rgba(224, 139, 123, 0.3);
-    }
-
-    .form-note {
+    .small-note {
       font-size: 0.8rem;
       color: var(--muted);
-      margin-top: 6px;
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid rgba(255, 255, 255, 0.7);
       padding: 20px 0 30px;
@@ -687,25 +652,25 @@
       text-underline-offset: 3px;
     }
 
-    /* Responsive */
     @media (max-width: 900px) {
       .hero-inner,
       .about-layout,
       .services-grid,
       .portfolio-grid,
-      .packages-grid,
       .contact-layout {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .services-grid,
-      .portfolio-grid,
-      .packages-grid {
-        gap: 16px;
+      .portfolio-grid {
+        gap: 10px;
       }
 
       .hero {
         padding-top: 42px;
+      }
+
+      .services-grid {
+        gap: 14px;
       }
     }
 
@@ -729,32 +694,31 @@
   </style>
 </head>
 <body>
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header>
     <div class="container">
       <nav class="nav">
         <a href="#top" class="nav-brand">
-          <span class="nav-mark">B</span>
-          <span>Bellinis Salon Suite + Blow Bar</span>
+          <span class="nav-mark">J</span>
+          <span>Jerry’s Hair Salon</span>
         </a>
 
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#packages">Packages</a>
-          <a href="#contact">Contact</a>
+          <a href="#portfolio">Gallery</a>
+          <a href="#contact">Visit</a>
         </div>
 
         <div class="nav-cta">
-          <button
-            class="btn btn-outline"
-            onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-          >
-            Contact
-          </button>
           <a
-            href="https://your-booking-link-here.com"
+            href="tel:12404857032"
+            class="btn btn-outline"
+          >
+            Call
+          </a>
+          <a
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0L0sDiKBCYpH8CSwdF4HIGpRgLHtzPqIOPN4NJ-B6TprXqkTv6jui4sXqF7KXwKDhTL5MXFNl"
             target="_blank"
             rel="noopener"
             class="btn btn-primary"
@@ -771,12 +735,13 @@
       <div class="nav-mobile" id="navMobile">
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#packages">Packages</a>
-        <a href="#contact">Contact</a>
-        <a href="https://your-booking-link-here.com" target="_blank" rel="noopener"
-          >Book Now</a
-        >
+        <a href="#portfolio">Gallery</a>
+        <a href="#contact">Visit</a>
+        <a
+          href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0L0sDiKBCYpH8CSwdF4HIGpRgLHtzPqIOPN4NJ-B6TprXqkTv6jui4sXqF7KXwKDhTL5MXFNl"
+          target="_blank"
+          rel="noopener"
+        >Book Now</a>
       </div>
     </div>
   </header>
@@ -789,59 +754,67 @@
           <div class="hero-copy">
             <div class="hero-tag">
               <span class="dot"></span>
-              <span>Now accepting new guests</span>
+              <span>Now booking in Wheaton Mall</span>
             </div>
             <h1 class="hero-title">
-              Elevated color, lived-in blondes, and signature blowouts.
+              Fresh cuts, color, braids and more at Jerry’s Hair Salon.
             </h1>
             <p class="hero-subtitle">
-              Bellinis is a boutique salon suite and blow bar offering personalized hair
-              color, extensions, and styling in a calm, modern space.
+              Located inside My Salon Suite at Westfield Wheaton Mall, Jerry’s Hair Salon offers professional haircuts, color, braids, weave installs, treatments and more for men and women.
             </p>
 
             <div class="hero-actions">
               <a
-                href="https://your-booking-link-here.com"
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0L0sDiKBCYpH8CSwdF4HIGpRgLHtzPqIOPN4NJ-B6TprXqkTv6jui4sXqF7KXwKDhTL5MXFNl"
                 class="btn btn-primary"
                 target="_blank"
                 rel="noopener"
               >
-                Book an Appointment
+                Book an appointment
               </a>
               <button
                 class="btn btn-outline"
                 onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})"
               >
-                View Services
+                View services
               </button>
             </div>
 
             <p class="hero-note">
-              Flexible payment options available on select bookings.
+              Not sure what to book? You can text or call before you schedule.
             </p>
 
             <div class="hero-meta">
-              <span><strong>Location:</strong> Your city, salon suite number</span>
-              <span><strong>Hours:</strong> By appointment only</span>
+              <span>
+                <strong>Address:</strong>
+                11160 Veirs Mill Rd Suite 114, Wheaton-Glenmont, MD 20902
+              </span>
+              <span>
+                <strong>Inside:</strong>
+                Wheaton Mall, lower level, My Salon Suite, north side parking
+              </span>
             </div>
           </div>
 
           <div class="hero-media">
             <div class="hero-card">
               <div class="hero-photo">
-                <!-- Replace with your real photo -->
+                <!-- Swap with a real photo of the salon or hair work when you have one -->
                 <img
-                  src="https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt="Salon blowout in progress"
+                  src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Stylist working in a salon"
                 />
 
                 <div class="hero-stats">
-                  <span>Balayage • Blowouts • Extensions</span>
+                  <span>Cuts</span>
+                  <span>Color</span>
+                  <span>Braids</span>
+                  <span>Treatments</span>
                 </div>
 
                 <div class="hero-badge">
                   <span class="hero-badge-dot"></span>
-                  <span>Curated, one-on-one hair appointments.</span>
+                  <span>Friendly, detailed hair care for every guest.</span>
                 </div>
               </div>
             </div>
@@ -855,50 +828,52 @@
       <div class="container">
         <div class="section-header">
           <div class="section-label">About</div>
-          <h2 class="section-title">A salon suite built around you.</h2>
+          <h2 class="section-title">Your neighborhood stylist in Wheaton.</h2>
         </div>
 
         <div class="about-layout">
           <div class="about-text">
             <p>
-              Bellinis Salon Suite + Blow Bar is an intimate studio that focuses on
-              effortless hair, custom color, and polished yet relaxed blowouts. Each
-              service is designed to feel unhurried, thoughtful, and tailored to your
-              lifestyle.
+              Jerry’s Hair Salon is a private suite inside My Salon Suite at Westfield Wheaton Mall. The space is relaxed, welcoming and focused on giving you a clean, polished style that fits your everyday life.
             </p>
             <p>
-              From dimensional color and low-maintenance blondes to smooth blowouts and
-              special occasion styling, every appointment starts with a detailed
-              consultation and a clear plan for your hair goals.
+              From simple trims to full color, braids, weave installs and treatments, each appointment includes a consultation so you and your stylist are on the same page before any service begins.
             </p>
 
             <div class="about-grid">
               <div class="about-stat">
-                <strong>Signature blonding</strong>
-                lived-in, dimensional, and soft grow-out.
+                <strong>Men’s and women’s cuts</strong>
+                Clean, sharp cuts and trims that match your style.
               </div>
               <div class="about-stat">
-                <strong>Luxury blowouts</strong>
-                polished, bouncy, and camera-ready.
+                <strong>Color and highlights</strong>
+                Single process, partial and full highlights with styling.
               </div>
               <div class="about-stat">
-                <strong>Extension services</strong>
-                length, volume, and fullness with a custom blend.
+                <strong>Braids and weave</strong>
+                Braiding, weave and wig installs plus natural hair care.
               </div>
               <div class="about-stat">
-                <strong>Quiet, private space</strong>
-                one-on-one appointments in a cozy suite.
+                <strong>Treatments and more</strong>
+                Relaxers, treatments, perms and eyebrow waxing.
               </div>
             </div>
           </div>
 
           <aside class="about-card">
-            <h3>Your experience</h3>
+            <h3>How to find the salon</h3>
             <p>
-              Expect a curated playlist, complimentary beverage, and a calm atmosphere
-              from the moment you walk in. Your appointment includes a thorough
-              consultation, scalp massage, and personalized product recommendations so
-              you can recreate your look at home.
+              Jerry’s Hair Salon is located on the lower level of Westfield Wheaton Mall inside
+              <strong>My Salon Suite</strong>.
+            </p>
+            <p>
+              Use the <strong>north side parking</strong> and enter at the lower level. Once inside, follow signs to
+              My Salon Suite and look for Suite 114.
+            </p>
+            <p style="margin-top: 10px;">
+              If you have trouble finding the salon, you can call or text:
+              <br />
+              <strong><a href="tel:12404857032">(240) 485 7032</a></strong>
             </p>
           </aside>
         </div>
@@ -910,226 +885,317 @@
       <div class="container">
         <div class="section-header">
           <div class="section-label">Services</div>
-          <h2 class="section-title">Color, extensions, and blowouts.</h2>
+          <h2 class="section-title">Cuts, color, braids, treatments and more.</h2>
         </div>
 
         <div class="services-grid">
-          <article class="service-card">
-            <div class="service-label">Color</div>
-            <h3 class="service-name">Lived-In Blonde & Balayage</h3>
-            <p class="service-desc">
-              Dimensional, soft blondes with seamless grow-out. Includes gloss, blowout,
-              and styling.
-            </p>
-            <div class="service-meta">
-              <span>Starting at <strong>$XXX</strong></span>
-              <span>2.5–3 hours</span>
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Men’s Haircut</div>
+              <div class="service-price">$38</div>
             </div>
-          </article>
+            <div class="service-note">
+              Clean, classic cut or updated style. Includes basic finish.
+            </div>
+          </div>
 
-          <article class="service-card">
-            <div class="service-label">Blow Bar</div>
-            <h3 class="service-name">Classic Blowout</h3>
-            <p class="service-desc">
-              Polished, bouncy blowout with round brush styling. Perfect for events or
-              weekly refresh.
-            </p>
-            <div class="service-meta">
-              <span>Starting at <strong>$XX</strong></span>
-              <span>45–60 minutes</span>
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Women’s Haircut</div>
+              <div class="service-price">$38</div>
             </div>
-          </article>
+            <div class="service-note">
+              Trim or full restyle, finished with simple styling.
+            </div>
+          </div>
 
-          <article class="service-card">
-            <div class="service-label">Extensions</div>
-            <h3 class="service-name">Custom Extension Installation</h3>
-            <p class="service-desc">
-              Add length and volume with hand-tied or other extension methods. Includes
-              blending cut and style.
-            </p>
-            <div class="service-meta">
-              <span>Consultation required</span>
-              <span>Time varies</span>
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Value Package</div>
+              <div class="service-price">$40</div>
             </div>
-          </article>
+            <div class="service-note">
+              Haircut, Tea Tree treatment and massage for a relaxing visit.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Partial Highlights</div>
+              <div class="service-price">$150</div>
+            </div>
+            <div class="service-note">
+              Lighten and brighten select sections around the head.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Full Highlights</div>
+              <div class="service-price">$200 - $300</div>
+            </div>
+            <div class="service-note">
+              Full head of highlights for maximum brightness and dimension.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Color (Single Process)</div>
+              <div class="service-price">$60 - $80</div>
+            </div>
+            <div class="service-note">
+              All over color for grey coverage or a fresh, solid shade.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Package - Color and Style</div>
+              <div class="service-price">$80 - $125</div>
+            </div>
+            <div class="service-note">
+              Single process color with blow dry and simple styling.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Package - Relaxer</div>
+              <div class="service-price">$90 - $150</div>
+            </div>
+            <div class="service-note">
+              Relaxer service and style. Pricing depends on hair length and thickness.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Blowouts and Simple Styling</div>
+              <div class="service-price">$45 - $65</div>
+            </div>
+            <div class="service-note">
+              Shampoo, blow dry and simple style or curls.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Braiding</div>
+              <div class="service-price">From $60 - $100</div>
+            </div>
+            <div class="service-note">
+              Braids for different styles. Final price depends on length and design.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Weave / Wig Install</div>
+              <div class="service-price">$150</div>
+            </div>
+            <div class="service-note">
+              Weave or wig install with finishing style.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Natural Hair Treatments</div>
+              <div class="service-price">$40 - $65</div>
+            </div>
+            <div class="service-note">
+              Treatments to help with moisture, shine and scalp health.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Perm</div>
+              <div class="service-price">From $100 - $125</div>
+            </div>
+            <div class="service-note">
+              Permanent wave service. Price varies based on hair length and texture.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Package - Eyebrow Waxing</div>
+              <div class="service-price">$25 - $35</div>
+            </div>
+            <div class="service-note">
+              Eyebrow waxing and shaping.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Roller Set</div>
+              <div class="service-price">From $45</div>
+            </div>
+            <div class="service-note">
+              Classic roller set for smooth, bouncy curls.
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-name">Hair Glass Treatment</div>
+              <div class="service-price">$45</div>
+            </div>
+            <div class="service-note">
+              Shine boosting treatment to leave hair smooth and glossy.
+            </div>
+          </div>
         </div>
+
+        <p class="hero-note" style="margin-top: 20px; text-align: center;">
+          Prices can vary based on hair length, thickness and service details.
+          If you are unsure what to choose, you can contact the salon before booking.
+        </p>
       </div>
     </section>
 
-    <!-- Portfolio -->
+    <!-- Gallery -->
     <section class="section" id="portfolio">
       <div class="container">
         <div class="section-header">
-          <div class="section-label">Portfolio</div>
-          <h2 class="section-title">Recent looks from the chair.</h2>
+          <div class="section-label">Gallery</div>
+          <h2 class="section-title">See the work on Instagram.</h2>
         </div>
 
         <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <!-- Replace with your photos -->
-            <img
-              src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Lived in blonde hair"
-            />
-            <div class="portfolio-tag">Lived-in blonde</div>
-          </div>
+          <!-- Replace images with real work later if you want -->
           <div class="portfolio-item">
             <img
-              src="https://images.pexels.com/photos/3739646/pexels-photo-3739646.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Blowout style"
+              src="https://images.pexels.com/photos/3992873/pexels-photo-3992873.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Styled hair in salon"
             />
-            <div class="portfolio-tag">Blowout</div>
+            <div class="portfolio-tag">@jerry_hair_stylist</div>
           </div>
           <div class="portfolio-item">
             <img
               src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Brunette balayage"
+              alt="Blowout hairstyle"
             />
-            <div class="portfolio-tag">Brunette balayage</div>
+            <div class="portfolio-tag">Cuts and color</div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://images.pexels.com/photos/3739654/pexels-photo-3739654.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Braids and styling"
+            />
+            <div class="portfolio-tag">Braids and styles</div>
           </div>
         </div>
+
+        <p class="hero-note" style="margin-top: 20px; text-align: center;">
+          Follow on Instagram:
+          <a
+            href="https://instagram.com/jerry_hair_stylist"
+            target="_blank"
+            rel="noopener"
+          >
+            @jerry_hair_stylist
+          </a>
+        </p>
       </div>
     </section>
 
-    <!-- Packages -->
-    <section class="section" id="packages">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-label">Packages</div>
-          <h2 class="section-title">Curated bundles for your hair goals.</h2>
-        </div>
-
-        <div class="packages-grid">
-          <article class="package-card">
-            <div>
-              <h3 class="package-name">Blonde Maintenance</h3>
-              <div class="package-price">From $XXX</div>
-              <p class="package-desc">
-                Gloss refresh, face-frame foils, treatment, and blowout to keep blondes
-                bright between major appointments.
-              </p>
-            </div>
-            <div class="package-meta">
-              <p>Ideal every 8–10 weeks.</p>
-              <p>Includes at-home care recommendations.</p>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div>
-              <h3 class="package-name">Event Prep</h3>
-              <div class="package-price">From $XXX</div>
-              <p class="package-desc">
-                Blowout plus styling with curls or waves. Add extensions or extra
-                time for special events.
-              </p>
-            </div>
-            <div class="package-meta">
-              <p>Perfect for photoshoots, showers, or nights out.</p>
-            </div>
-          </article>
-
-          <article class="package-card">
-            <div>
-              <h3 class="package-name">New Guest Transformation</h3>
-              <div class="package-price">Custom pricing</div>
-              <p class="package-desc">
-                Extended consultation, major color shift, treatment, and photo-ready
-                blowout for first-time guests.
-              </p>
-            </div>
-            <div class="package-meta">
-              <p>Requires a virtual or in-person consultation.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
+    <!-- Contact / Visit -->
     <section class="section" id="contact">
       <div class="container">
         <div class="section-header">
-          <div class="section-label">Contact</div>
-          <h2 class="section-title">Ready to book or have a question?</h2>
+          <div class="section-label">Visit</div>
+          <h2 class="section-title">Hours, location and booking details.</h2>
         </div>
 
         <div class="contact-layout">
           <div class="contact-card">
-            <p>
-              For booking, rescheduling, and questions about services, the fastest way to
-              reach the salon is through the booking link or by sending a quick message.
-            </p>
-
             <div class="contact-grid">
               <div>
                 <h4>Location</h4>
-                <p>Bellinis Salon Suite + Blow Bar</p>
-                <p>Street address line 1</p>
-                <p>City, State ZIP</p>
+                <p><strong>Jerry’s Hair Salon</strong></p>
+                <p>11160 Veirs Mill Rd Suite 114</p>
+                <p>Wheaton-Glenmont, MD 20902</p>
+                <p style="margin-top: 6px;">
+                  Inside Wheaton Mall, lower level, My Salon Suite.
+                  Use north side parking, lower level entrance.
+                </p>
               </div>
               <div>
                 <h4>Contact</h4>
-                <p><strong>Text:</strong> (XXX) XXX-XXXX</p>
-                <p><strong>Email:</strong> hello@yourdomain.com</p>
-                <p><strong>Instagram:</strong> @yourhandle</p>
+                <p><strong>Phone:</strong> <a href="tel:12404857032">(240) 485 7032</a></p>
+                <p>
+                  <strong>Instagram:</strong>
+                  <a
+                    href="https://instagram.com/jerry_hair_stylist"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    @jerry_hair_stylist
+                  </a>
+                </p>
               </div>
+            </div>
+
+            <div style="margin-top: 18px;">
+              <h4 style="font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 6px;">
+                Hours
+              </h4>
+              <ul class="hours-list">
+                <li><span>Sunday</span><span>Closed</span></li>
+                <li><span>Monday</span><span>Closed</span></li>
+                <li><span>Tuesday</span><span>11:00 AM – 7:00 PM</span></li>
+                <li><span>Wednesday</span><span>10:00 AM – 7:00 PM</span></li>
+                <li><span>Thursday</span><span>10:00 AM – 7:00 PM</span></li>
+                <li><span>Friday</span><span>10:00 AM – 7:00 PM</span></li>
+                <li><span>Saturday</span><span>9:00 AM – 7:00 PM</span></li>
+              </ul>
+            </div>
+
+            <div class="consent-card">
+              <h4>Consent and policies</h4>
+              <ul>
+                <li>You are choosing to receive hair and beauty services at your own discretion.</li>
+                <li>Results can vary depending on hair condition, maintenance and other factors.</li>
+                <li>By booking you release the stylist from liability for unexpected outcomes, sensitivities or reactions during or after the service.</li>
+                <li>Please share any allergies, scalp sensitivities or medical conditions before your appointment.</li>
+              </ul>
+              <p>
+                Be on time for your appointment and cancel or reschedule at least 24 hours before if needed.
+                If you are unsure what service to book, you can reach out before scheduling.
+              </p>
             </div>
           </div>
 
-          <form
-            class="contact-form"
-            action="mailto:hello@yourdomain.com"
-            method="post"
-            enctype="text/plain"
-          >
-            <div class="field-group">
-              <label class="field-label" for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="field-input"
-                required
-              />
-            </div>
-            <div class="field-group">
-              <label class="field-label" for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="field-input"
-                required
-              />
-            </div>
-            <div class="field-group">
-              <label class="field-label" for="service">Service Interest</label>
-              <select id="service" name="service" class="field-select">
-                <option value="">Select an option</option>
-                <option value="color">Color / Blonding</option>
-                <option value="blowout">Blowout</option>
-                <option value="extensions">Extensions</option>
-                <option value="other">Other / Not Sure</option>
-              </select>
-            </div>
-            <div class="field-group">
-              <label class="field-label" for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                class="field-textarea"
-                placeholder="Share your hair goals, preferred days, and any questions."
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">
-              Send Message
-            </button>
-            <p class="form-note">
-              For urgent changes, please text the salon directly.
+          <div class="contact-right">
+            <h3>Book your next appointment</h3>
+            <p>
+              Use the online booking link below to choose a time and service.
+              If you have questions about what to book, send a message or call first.
             </p>
-          </form>
+
+            <a
+              href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0L0sDiKBCYpH8CSwdF4HIGpRgLHtzPqIOPN4NJ-B6TprXqkTv6jui4sXqF7KXwKDhTL5MXFNl"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+            >
+              Book online
+            </a>
+
+            <p class="small-note">
+              If there are no times available that work for you, you can contact the salon to ask about other options.
+            </p>
+
+            <p class="small-note" style="margin-top: 10px;">
+              For last minute changes or urgent questions, it is best to call or text:
+              <br />
+              <strong><a href="tel:12404857032">(240) 485 7032</a></strong>
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -1139,16 +1205,17 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <span>© <span id="year"></span> Bellinis Salon Suite + Blow Bar.</span>
+        <span>© <span id="year"></span> Jerry’s Hair Salon. All rights reserved.</span>
         <div class="footer-links">
           <a href="#top">Back to top</a>
-          <a href="#contact">Contact</a>
-          <a href="https://your-terms-link.com" target="_blank" rel="noopener"
-            >Terms</a
+          <a href="#contact">Visit</a>
+          <a
+            href="https://instagram.com/jerry_hair_stylist"
+            target="_blank"
+            rel="noopener"
           >
-          <a href="https://your-privacy-link.com" target="_blank" rel="noopener"
-            >Privacy</a
-          >
+            Instagram
+          </a>
         </div>
       </div>
     </div>
