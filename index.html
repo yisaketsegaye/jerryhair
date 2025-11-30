@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bellinis Salon Suite + Blow Bar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Bellinis Salon Suite + Blow Bar – modern hair, color, and blowout studio."
+  />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #fdf9f7;
+      --bg-alt: #ffffff;
+      --accent: #f5b2a7;
+      --accent-dark: #e08b7b;
+      --text: #222222;
+      --muted: #777777;
+      --border: #eee4de;
+      --nav-height: 70px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+        sans-serif;
+      background: radial-gradient(circle at top left, #fff3ec, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Layout helpers */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+      letter-spacing: 0.03em;
+    }
+
+    /* Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(253, 249, 247, 0.92);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .nav {
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .nav-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      background: linear-gradient(135deg, #ffe2d8, #fdf9f7);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--muted);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: var(--accent-dark);
+      transition: width 0.16s ease-out;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn {
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #ffffff;
+      box-shadow: 0 10px 25px rgba(224, 139, 123, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 32px rgba(224, 139, 123, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-dark);
+      color: var(--accent-dark);
+    }
+
+    /* Mobile nav */
+    .nav-toggle {
+      display: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #ffffff;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      width: 16px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 999px;
+      position: relative;
+    }
+
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 999px;
+      left: 0;
+    }
+
+    .nav-toggle span::before {
+      top: -5px;
+    }
+
+    .nav-toggle span::after {
+      top: 5px;
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 14px;
+      padding: 14px 0 18px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+
+    .nav-mobile a {
+      padding: 6px 0;
+    }
+
+    .nav-mobile.open {
+      display: flex;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 72px 0 90px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #86d19f;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.5rem, 3.7vw, 3.4rem);
+      line-height: 1.08;
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 460px;
+      margin-bottom: 26px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px 26px;
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-top: 20px;
+    }
+
+    .hero-meta strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: 26px;
+      background: radial-gradient(circle at top left, #ffe4db, #fff);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .hero-photo {
+      position: relative;
+      overflow: hidden;
+      max-height: 430px;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-badge {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-badge-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #86d19f;
+      box-shadow: 0 0 0 6px rgba(134, 209, 159, 0.28);
+    }
+
+    .hero-stats {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.66);
+      color: #ffffff;
+      font-size: 0.76rem;
+      display: flex;
+      gap: 10px;
+    }
+
+    .hero-stats span {
+      opacity: 0.9;
+    }
+
+    /* About */
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 40px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 14px;
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 8px;
+    }
+
+    .about-stat {
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+      font-size: 0.86rem;
+    }
+
+    .about-stat strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .about-card {
+      border-radius: 22px;
+      padding: 22px;
+      background: linear-gradient(135deg, #ffffff, #ffeae2);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.9rem;
+    }
+
+    .about-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.03);
+    }
+
+    .service-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .service-name {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .service-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .service-meta strong {
+      color: var(--text);
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #eee;
+      height: 230px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.06);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portfolio-tag {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.62);
+      color: #ffffff;
+      font-size: 0.74rem;
+    }
+
+    /* Packages */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .package-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .package-name {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .package-price {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .package-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .package-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 36px;
+    }
+
+    .contact-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.04);
+      font-size: 0.92rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 14px;
+      font-size: 0.86rem;
+    }
+
+    .contact-grid h4 {
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .contact-grid p {
+      margin-bottom: 4px;
+    }
+
+    .contact-form {
+      background: linear-gradient(135deg, #ffe5dc, #ffffff);
+      border-radius: var(--radius-lg);
+      padding: 26px 24px;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.04);
+    }
+
+    .field-group {
+      margin-bottom: 16px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .field-input,
+    .field-textarea,
+    .field-select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 0.9rem;
+      outline: none;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .field-textarea {
+      border-radius: 18px;
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .field-input:focus,
+    .field-textarea:focus,
+    .field-select:focus {
+      border-color: var(--accent-dark);
+      box-shadow: 0 0 0 1px rgba(224, 139, 123, 0.3);
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.7);
+      padding: 20px 0 30px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner,
+      .about-layout,
+      .services-grid,
+      .portfolio-grid,
+      .packages-grid,
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .services-grid,
+      .portfolio-grid,
+      .packages-grid {
+        gap: 16px;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="#top" class="nav-brand">
+          <span class="nav-mark">B</span>
+          <span>Bellinis Salon Suite + Blow Bar</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#packages">Packages</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <button
+            class="btn btn-outline"
+            onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+          >
+            Contact
+          </button>
+          <a
+            href="https://your-booking-link-here.com"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+          >
+            Book Now
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
+          <span></span>
+        </button>
+      </nav>
+
+      <div class="nav-mobile" id="navMobile">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+        <a href="https://your-booking-link-here.com" target="_blank" rel="noopener"
+          >Book Now</a
+        >
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="hero-tag">
+              <span class="dot"></span>
+              <span>Now accepting new guests</span>
+            </div>
+            <h1 class="hero-title">
+              Elevated color, lived-in blondes, and signature blowouts.
+            </h1>
+            <p class="hero-subtitle">
+              Bellinis is a boutique salon suite and blow bar offering personalized hair
+              color, extensions, and styling in a calm, modern space.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                href="https://your-booking-link-here.com"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Book an Appointment
+              </a>
+              <button
+                class="btn btn-outline"
+                onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})"
+              >
+                View Services
+              </button>
+            </div>
+
+            <p class="hero-note">
+              Flexible payment options available on select bookings.
+            </p>
+
+            <div class="hero-meta">
+              <span><strong>Location:</strong> Your city, salon suite number</span>
+              <span><strong>Hours:</strong> By appointment only</span>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-card">
+              <div class="hero-photo">
+                <!-- Replace with your real photo -->
+                <img
+                  src="https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Salon blowout in progress"
+                />
+
+                <div class="hero-stats">
+                  <span>Balayage • Blowouts • Extensions</span>
+                </div>
+
+                <div class="hero-badge">
+                  <span class="hero-badge-dot"></span>
+                  <span>Curated, one-on-one hair appointments.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">About</div>
+          <h2 class="section-title">A salon suite built around you.</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-text">
+            <p>
+              Bellinis Salon Suite + Blow Bar is an intimate studio that focuses on
+              effortless hair, custom color, and polished yet relaxed blowouts. Each
+              service is designed to feel unhurried, thoughtful, and tailored to your
+              lifestyle.
+            </p>
+            <p>
+              From dimensional color and low-maintenance blondes to smooth blowouts and
+              special occasion styling, every appointment starts with a detailed
+              consultation and a clear plan for your hair goals.
+            </p>
+
+            <div class="about-grid">
+              <div class="about-stat">
+                <strong>Signature blonding</strong>
+                lived-in, dimensional, and soft grow-out.
+              </div>
+              <div class="about-stat">
+                <strong>Luxury blowouts</strong>
+                polished, bouncy, and camera-ready.
+              </div>
+              <div class="about-stat">
+                <strong>Extension services</strong>
+                length, volume, and fullness with a custom blend.
+              </div>
+              <div class="about-stat">
+                <strong>Quiet, private space</strong>
+                one-on-one appointments in a cozy suite.
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-card">
+            <h3>Your experience</h3>
+            <p>
+              Expect a curated playlist, complimentary beverage, and a calm atmosphere
+              from the moment you walk in. Your appointment includes a thorough
+              consultation, scalp massage, and personalized product recommendations so
+              you can recreate your look at home.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Services</div>
+          <h2 class="section-title">Color, extensions, and blowouts.</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-label">Color</div>
+            <h3 class="service-name">Lived-In Blonde & Balayage</h3>
+            <p class="service-desc">
+              Dimensional, soft blondes with seamless grow-out. Includes gloss, blowout,
+              and styling.
+            </p>
+            <div class="service-meta">
+              <span>Starting at <strong>$XXX</strong></span>
+              <span>2.5–3 hours</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">Blow Bar</div>
+            <h3 class="service-name">Classic Blowout</h3>
+            <p class="service-desc">
+              Polished, bouncy blowout with round brush styling. Perfect for events or
+              weekly refresh.
+            </p>
+            <div class="service-meta">
+              <span>Starting at <strong>$XX</strong></span>
+              <span>45–60 minutes</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">Extensions</div>
+            <h3 class="service-name">Custom Extension Installation</h3>
+            <p class="service-desc">
+              Add length and volume with hand-tied or other extension methods. Includes
+              blending cut and style.
+            </p>
+            <div class="service-meta">
+              <span>Consultation required</span>
+              <span>Time varies</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Portfolio</div>
+          <h2 class="section-title">Recent looks from the chair.</h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <!-- Replace with your photos -->
+            <img
+              src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Lived in blonde hair"
+            />
+            <div class="portfolio-tag">Lived-in blonde</div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://images.pexels.com/photos/3739646/pexels-photo-3739646.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Blowout style"
+            />
+            <div class="portfolio-tag">Blowout</div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Brunette balayage"
+            />
+            <div class="portfolio-tag">Brunette balayage</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="section" id="packages">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Packages</div>
+          <h2 class="section-title">Curated bundles for your hair goals.</h2>
+        </div>
+
+        <div class="packages-grid">
+          <article class="package-card">
+            <div>
+              <h3 class="package-name">Blonde Maintenance</h3>
+              <div class="package-price">From $XXX</div>
+              <p class="package-desc">
+                Gloss refresh, face-frame foils, treatment, and blowout to keep blondes
+                bright between major appointments.
+              </p>
+            </div>
+            <div class="package-meta">
+              <p>Ideal every 8–10 weeks.</p>
+              <p>Includes at-home care recommendations.</p>
+            </div>
+          </article>
+
+          <article class="package-card">
+            <div>
+              <h3 class="package-name">Event Prep</h3>
+              <div class="package-price">From $XXX</div>
+              <p class="package-desc">
+                Blowout plus styling with curls or waves. Add extensions or extra
+                time for special events.
+              </p>
+            </div>
+            <div class="package-meta">
+              <p>Perfect for photoshoots, showers, or nights out.</p>
+            </div>
+          </article>
+
+          <article class="package-card">
+            <div>
+              <h3 class="package-name">New Guest Transformation</h3>
+              <div class="package-price">Custom pricing</div>
+              <p class="package-desc">
+                Extended consultation, major color shift, treatment, and photo-ready
+                blowout for first-time guests.
+              </p>
+            </div>
+            <div class="package-meta">
+              <p>Requires a virtual or in-person consultation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Contact</div>
+          <h2 class="section-title">Ready to book or have a question?</h2>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-card">
+            <p>
+              For booking, rescheduling, and questions about services, the fastest way to
+              reach the salon is through the booking link or by sending a quick message.
+            </p>
+
+            <div class="contact-grid">
+              <div>
+                <h4>Location</h4>
+                <p>Bellinis Salon Suite + Blow Bar</p>
+                <p>Street address line 1</p>
+                <p>City, State ZIP</p>
+              </div>
+              <div>
+                <h4>Contact</h4>
+                <p><strong>Text:</strong> (XXX) XXX-XXXX</p>
+                <p><strong>Email:</strong> hello@yourdomain.com</p>
+                <p><strong>Instagram:</strong> @yourhandle</p>
+              </div>
+            </div>
+          </div>
+
+          <form
+            class="contact-form"
+            action="mailto:hello@yourdomain.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="field-group">
+              <label class="field-label" for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="field-input"
+                required
+              />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="field-input"
+                required
+              />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="service">Service Interest</label>
+              <select id="service" name="service" class="field-select">
+                <option value="">Select an option</option>
+                <option value="color">Color / Blonding</option>
+                <option value="blowout">Blowout</option>
+                <option value="extensions">Extensions</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="field-textarea"
+                placeholder="Share your hair goals, preferred days, and any questions."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Send Message
+            </button>
+            <p class="form-note">
+              For urgent changes, please text the salon directly.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Bellinis Salon Suite + Blow Bar.</span>
+        <div class="footer-links">
+          <a href="#top">Back to top</a>
+          <a href="#contact">Contact</a>
+          <a href="https://your-terms-link.com" target="_blank" rel="noopener"
+            >Terms</a
+          >
+          <a href="https://your-privacy-link.com" target="_blank" rel="noopener"
+            >Privacy</a
+          >
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const navToggle = document.getElementById("navToggle");
+    const navMobile = document.getElementById("navMobile");
+
+    navToggle.addEventListener("click", () => {
+      navMobile.classList.toggle("open");
+    });
+
+    navMobile.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMobile.classList.remove("open");
+      });
+    });
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
